@@ -1,0 +1,58 @@
+﻿<Window x:Name="frmMain" x:Class="Retegan_Andra_Lab2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Retegan_Andra_Lab2"
+        mc:Ignorable="d"
+        Title="Virtual Doughnuts Factory" Height="450" Width="800" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" ResizeMode="NoResize">
+    <Grid>
+        <Label x:Name="lblTitle" Content="Doughnuts - Bake and Sale" HorizontalAlignment="Center" Margin="0,51,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
+        <GroupBox x:Name="gbRaised" Header="Raised" FontWeight="Bold" Margin="174,92,446,193">
+            <Canvas/>
+        </GroupBox>
+
+        <GroupBox x:Name="gbFilled" Header="Filled" FontWeight="Bold" Margin="446,92,166,193">
+            <Canvas/>
+        </GroupBox>
+        <Label x:Name="lblGlazedRaised" Content="Glazed" Margin="194,134,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtGlazedRaised" Text="0" TextWrapping="Wrap" IsReadOnly="True" Margin="283,137,477,277"/>
+        <Label x:Name="lblSugarRaised" Content="Sugar" Margin="197,187,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <TextBox x:Name="txtSugarRaised" Text="0" TextWrapping="Wrap" IsReadOnly="True" Margin="283,194,477,221"/>
+        <Label x:Name="lblLemonFilled" Content="Lemon" Margin="464,116,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtLemonFilled" Text="0" TextWrapping="Wrap" IsReadOnly="True" Margin="553,119,207,295"/>
+        <Label x:Name="lblChocolateFilled" Content="Chocolate" Margin="464,157,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtChocolateFilled" Text="0" TextWrapping="Wrap" IsReadOnly="True" Margin="553,160,207,254"/>
+        <Label x:Name="lblVanillaFilled" Content="Vanilla" Margin="464,200,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtVanillaFilled" Text="0" TextWrapping="Wrap" IsReadOnly="True" Margin="553,204,207,210"/>
+        <GroupBox x:Name="gbSale" Header="Current Sale" FontWeight="Bold" Margin="28,259,28,10">
+            <Canvas/>
+        </GroupBox>
+        <Label x:Name="lblQuantity" Content="Quantity" Margin="42,287,694,119" RenderTransformOrigin="0.541,-0.349"/>
+        <TextBox x:Name="txtQuantity" TextWrapping="Wrap" Width="40" Height="20" Margin="113,291,647,123"/>
+        <Label x:Name="lblType" Content="Type" Margin="194,287,542,119"/>
+        <ComboBox x:Name="cmbType" Width="120" Height="20" Margin="243,291,437,123"/>
+        <Label x:Name="lblPrice" Content="Price" Margin="400,287,336,119"/>
+        <TextBox x:Name="txtPrice" Text="0" TextWrapping="Wrap" Width="140" Height="20" Margin="453,291,207,123" />
+        <ListBox x:Name="lstSale" Margin="42,327,207,55"/>
+        <Label x:Name="lblTotal" Content="Total" FontWeight="Bold" Margin="400,384,336,22"/>
+        <TextBox x:Name="txtTotal" Text="0" TextWrapping="Wrap" Width="140" Height="20" Margin="453,388,207,26" IsReadOnly="True" FontWeight="Bold" />
+        <Button x:Name="btnAddToSale" Content="Add To Sale" Margin="630,310,64,104" Height="20"/>
+        <Button x:Name="btnRemoveItem" Content="Remove Item" Margin="630,338,64,76" Height="20"/>
+        <Button x:Name="btnCheckOut" Content="Check Out" Margin="630,382,64,20" FontWeight="Bold"/>
+        <Menu x:Name="mnuMain" HorizontalAlignment="Left" Height="21" VerticalAlignment="Top" Width="131" Margin="0,26,0,0">
+            <MenuItem Header="File">
+                <MenuItem Header="Exit"/>
+            </MenuItem>
+            <MenuItem Header="_Doughnuts">
+                <MenuItem Header="Make">
+                    <MenuItem Header="Raised">
+                        <MenuItem x:Name="glazedMenuItem" Header="Glazed"/>
+                        <MenuItem x:Name="sugarMenuItem" Header="Sugar"/>
+                    </MenuItem>
+                    <MenuItem Header="Filled"/>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+    </Grid>
+</Window>
